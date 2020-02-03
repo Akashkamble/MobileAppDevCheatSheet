@@ -11,10 +11,10 @@ var arr = emptyArray<String>()
 ```
 
 ### Visibility Modifier
->private       : Same as java\
-protected     : same as java\
-internal      : same as java default // accessible in the same module \
-public        : same as java 
+>private      : Declarations are not visible outside the current scope\
+protected     : Declarations that are protected in a class, can be accessed only in their subclasses\
+internal      : Declarations are visible everywhere in the same module\
+public        : Declaration is visible everywhere
 
 ### Loops
 ```Kotlin

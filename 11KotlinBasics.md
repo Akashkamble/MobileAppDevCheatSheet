@@ -71,7 +71,7 @@ when (obj) {
 ```Kotlin
 class Customer(name: String, val type: String)
 ```
-- Here **name** is just parameter and can't be used outside the method scope.
+- Here **name** is just parameter and can only be used inside the initializer block.
 - **type** is a declared variable and can be used anywhere in the class scope.
 
 ```Kotlin
@@ -394,44 +394,30 @@ fun main(args: Array<String>) {
     println("First character is: $result")
 }
 ```
-Inner Class 
-========================================================
-Java: holding reference of outer class 
+### Nested Class
 ```Kotlin
 class A {
     class B {
-    ...
+        ...
     }
 }
 ```
-Kotlin: holding reference of outer class 
-```Kotlin
-class A {
-    inner class B {
-    ...
-    }
-}
-```
+>Nested class can’t access the members of outer class, but we can access the property of nested class from the outer class without creating object for nested class.
 
 vs 
 
-Inner static class 
--------------------------------------------------------
-Java
+### Inner Class 
 ```Kotlin
 class A {
-    static class B {
-    ...
+    inner class B {
+        ...
     }
 }
 ```
+>When we can declare a class inside another class using the keyword inner then it is called inner class. With the help of inner class we can access the outer class property inside the inner class.
 
-Kotlin 
-```Kotlin
-class A {
-    class B {
-    ...
-    }
-}
-```
+#### Comparison with Java
+>Kotlin classes are much similar to Java classes when we think about the capabilites and use cases, but not identical. Nested in Koltin is similar to static nested class in Java and Inner class is similar to non-static nested class in Java.
+
+![Class comparision with Java](https://media.geeksforgeeks.org/wp-content/uploads/20190613124203/nested.jpg)
 

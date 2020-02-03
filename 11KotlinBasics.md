@@ -251,7 +251,7 @@ nums.find { it > 6 } // Returns first number than meets the condition
 ```
 
 ### Type check
-if (obj is String)
+>if (obj is String)
 
 ### Collections - Mutable vs Immutable
 Immutable List
